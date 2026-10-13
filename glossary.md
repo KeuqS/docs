@@ -12,7 +12,7 @@ A code entry stores the contract's WebAssembly bytecode on the network. SoroProb
 
 ## Contract spec (`contractspecv0`)
 
-A contract spec is the machine-readable interface embedded in a contract's WASM, including functions, types, errors, and events; `contractspecv0` is the versioned Soroban spec representation that tooling decodes. SoroVault reads it with `add`/\`refresh`, and SoroProbe can use the registered interface to type otherwise bare arguments; see [working with contract specs](https://developers.stellar.org/docs/build/guides/dapps/working-with-contract-specs).
+A contract spec is the machine-readable interface embedded in a contract's WASM, including functions, types, errors, and events; `contractspecv0` is the versioned Soroban spec representation that tooling decodes. SoroVault reads it with `add`/`refresh`, and SoroProbe can use the registered interface to type otherwise bare arguments; see [working with contract specs](https://developers.stellar.org/docs/build/guides/dapps/working-with-contract-specs).
 
 ## Data entry
 
