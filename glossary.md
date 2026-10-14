@@ -22,6 +22,10 @@ A data entry is contract state stored under a key, with a durability class such 
 
 An Instance entry stores a contract's instance-level state and metadata, separate from the contract's WASM code and ordinary data entries. SoroProbe includes the instance entry in `inspect` and `check` expiration reports; Stellar's [state archival guide](https://developers.stellar.org/docs/learn/fundamentals/contract-development/storage/state-archival) describes how Instance storage is accessed.
 
+## Live-until ledger (`liveUntilLedgerSeq`)
+
+An entry remains live through its `liveUntilLedgerSeq` boundary; its TTL is the number of ledgers between the current ledger and that boundary, rather than a wall-clock duration. SoroProbe surfaces the resulting expiration health through `inspect` and the `instance_ttl`, `code_ttl`, and `data_ttl` values reported by `check`; see Stellar's [state archival guide](https://developers.stellar.org/docs/learn/fundamentals/contract-development/storage/state-archival).
+
 ## Network passphrase
 
 A network passphrase names a Stellar network and is used when deriving the network ID and validating transaction signatures, so a transaction for one network cannot be reused on another. SoroForge, SoroProbe, and SoroVault accept it in their network configuration or command flags; compare the [network documentation](https://developers.stellar.org/docs/networks) before switching between networks.
