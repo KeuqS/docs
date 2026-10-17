@@ -36,7 +36,7 @@ Persistent storage is intended for contract state that should remain available a
 
 ## Stellar Asset Contract (SAC)
 
-A Stellar Asset Contract is the Soroban contract representation of a Stellar asset and implements the SEP-41 token interface. SoroProbe can inspect or simulate its read-only behavior, while SoroVault may have no interface to serve when the deployed asset contract has no embedded spec; the [SAC guide](https://developers.stellar.org/docs/build/guides/tokens/stellar-asset-contract) covers the standard.
+A Stellar Asset Contract is the Soroban contract representation of a Stellar asset and implements the SEP-41 token interface. SoroProbe can inspect or simulate its read-only behavior and reports that it has no code entry. A SAC is built into the host rather than deployed as WASM, so it carries no embedded spec and SoroVault answers `422` for it; the [SAC guide](https://developers.stellar.org/docs/build/guides/tokens/stellar-asset-contract) covers the standard.
 
 ## Temporary storage
 
